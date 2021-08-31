@@ -30,8 +30,8 @@
   },
   "jest": {
     "transform": {
-      "^.+\\svelte": "svelte-jester",
-      "^.+\\js": "babel-jest"
+      "^.+\\.svelte$": "svelte-jester",
+      "^.+\\.js$": "babel-jest"
     }
   }
 }
