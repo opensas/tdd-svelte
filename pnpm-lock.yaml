@@ -1,14 +1,14 @@
 lockfileVersion: 5.3
 
 specifiers:
-  '@babel/preset-env': ^7.15.0
+  '@babel/preset-env': ^7.13.12
   '@rollup/plugin-commonjs': ^17.0.0
   '@rollup/plugin-node-resolve': ^11.0.0
-  '@testing-library/jest-dom': ^5.14.1
+  '@testing-library/jest-dom': ^5.11.10
   '@testing-library/svelte': ^3.0.3
-  '@testing-library/user-event': ^13.2.1
-  babel-jest: 26.6.3
-  jest: 26.6.3
+  '@testing-library/user-event': ^13.1.1
+  babel-jest: ^26.6.3
+  jest: ^26.6.3
   rollup: ^2.3.4
   rollup-plugin-css-only: ^3.1.0
   rollup-plugin-livereload: ^2.0.0
@@ -16,7 +16,7 @@ specifiers:
   rollup-plugin-terser: ^7.0.0
   sirv-cli: ^1.0.0
   svelte: ^3.0.0
-  svelte-jester: ^2.1.1
+  svelte-jester: ^1.3.2
 
 dependencies:
   sirv-cli: 1.0.14
@@ -36,7 +36,7 @@ devDependencies:
   rollup-plugin-svelte: 7.1.0_rollup@2.56.3+svelte@3.42.4
   rollup-plugin-terser: 7.0.2_rollup@2.56.3
   svelte: 3.42.4
-  svelte-jester: 2.1.1_jest@26.6.3+svelte@3.42.4
+  svelte-jester: 1.8.2_jest@26.6.3+svelte@3.42.4
 
 packages:
 
@@ -4739,11 +4739,11 @@ packages:
       supports-color: 7.2.0
     dev: true
 
-  /svelte-jester/2.1.1_jest@26.6.3+svelte@3.42.4:
-    resolution: {integrity: sha512-psL6MoqV9Ps31WN+94mT7VBnWOWENMO0jWB3LhBTJFN8Rk28uAFYoJeqkIudOlpf7deA3ERFqZ/+Wd07rhOG8w==}
+  /svelte-jester/1.8.2_jest@26.6.3+svelte@3.42.4:
+    resolution: {integrity: sha512-m2ZhsnBY8T8b1KFE9u8CzUzAt1YoBgKkPWIuzeIfKd9ImYfa/aoiOb3/JcnUQQI4m/j/cPjWMGUBsTXhkXB7HQ==}
     engines: {node: '>= 14'}
     peerDependencies:
-      jest: '>= 27'
+      jest: <= 26
       svelte: '>= 3'
     dependencies:
       jest: 26.6.3
