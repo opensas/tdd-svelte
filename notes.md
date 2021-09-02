@@ -17,14 +17,17 @@ stack used
 
 In the next part, we will install test packages to our project. We are using jest as test runner, and currently it has new major version, (v 27). And to use svelte files in tests, we will install svelte-jester. But this library is not stable with the latest version of jest. So please install specific versions as follows.
 
+```shell
 npm install --save-dev jest@26.6.3
 npm install --save-dev babel-jest@26.6.3
 npm install --save-dev svelte-jester@1.3.2
+```
 
 ---
 
 ## Step by Step configuration
 
+```shell
 npx degit sveltejs/template tdd-svelte-test
 
 cd tdd-svelte-test
@@ -63,6 +66,7 @@ END
 cat > src/pages/SignUpPage.svelte << END
 <h1>Sign Up</h1>
 END
+```
 
 Add to package.json
 
@@ -71,25 +75,42 @@ Add to package.json
     "transform": {
       "^.+\\.svelte$": "svelte-jester",
       "^.+\\.js$": "babel-jest"
-    }
+    },
+    "moduleFileExtensions": [
+      "js",
+      "ts",
+      "svelte"
+    ]
   }
 ```
 
+```shell
 npx npe 'jest.transform.__svelte-reg-exp__' "svelte-jester"
 sed -i 's/__svelte-reg-exp__/^.+\\\\.svelte$/g' package.json
 npx npe 'jest.transform.__js-reg-exp__' "babel-jest"
 sed -i 's/__js-reg-exp__/^.+\\\\.js$/g' package.json
 
-npx npe 'jest.moduleFileExtensions2' "js ts svelte"
+```
 
-
-npx npe 'scripts.test' "jest --watchAll"
+> Note: don't forget to add the `moduleFileExtensions` part, which I couldn't automate
 
 And in the scripts scripts section:
 
 ```json
 "test": "jest --watch"
 ```
+
+```shell
+npx npe 'scripts.test' "jest --watchAll"
+```
+
+and run with
+
+```shell
+pnpm test
+```
+
+---
 
 ## My Questions at udemy course
 
